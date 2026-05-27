@@ -181,7 +181,7 @@ PowerShell を開いて、任意のディレクトリでクローンします。
 # 例: C:\Users\username\Projects に配置する場合
 cd C:\Users\$env:USERNAME\Projects
 
-git clone <リポジトリURL> ros1_docker_win_ws
+git clone https://github.com/Harlequinade1123/ros1_docker_win_ws.git
 cd ros1_docker_win_ws
 ```
 
