@@ -145,9 +145,13 @@ docker compose version
 
 RViz・Gazebo などの GUI を使うには、Windows 側で X サーバーを動かす必要があります。
 
+> **WSLg について**: Windows 11 の WSLg は WSL2 ターミナル内から直接起動するアプリには使えますが、  
+> **PowerShell から起動した Docker コンテナからは WSLg にアクセスできません**。VcXsrv が必要です。
+
 ### インストール
 
-[SourceForge](https://sourceforge.net/projects/vcxsrv/)から最新版をダウンロードしてインストールします。
+[SourceForge](https://sourceforge.net/projects/vcxsrv/)から最新版をダウンロードしてインストールします。  
+インストールすると **XLaunch**（VcXsrv の設定・起動ツール）がスタートメニューに追加されます。
 
 ### 起動設定
 
@@ -247,7 +251,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ### GUI ツール（RViz / Gazebo）
 
-VcXsrv が起動している状態で実行します。
+XLaunch が起動している状態で実行します。
 
 ```powershell
 # 実行場所: PowerShell（リポジトリのルートディレクトリで実行）
@@ -476,8 +480,8 @@ SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{seria
 
 ### GUI（RViz/Gazebo）が表示されない
 
-1. VcXsrv が起動しているか確認（タスクバーに X のアイコン）
-2. VcXsrv の「Disable access control」が有効か確認
+1. XLaunch が起動しているか確認（タスクバーに X のアイコン）
+2. XLaunch 起動時の「Disable access control」が有効か確認
 3. Windows ファイアウォールで VcXsrv が許可されているか確認  
    設定 → Windows セキュリティ → ファイアウォール → アプリ許可
 4. コンテナ内で DISPLAY を確認:
