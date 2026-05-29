@@ -1,5 +1,13 @@
 # ROS1 Noetic Docker ワークスペース
 
+> [!IMPORTANT]
+> **このリポジトリは移転しました。**  
+> 本リポジトリの内容は [https://github.com/Harlequinade1123/ros1_docker_ws](https://github.com/Harlequinade1123/ros1_docker_ws) に統合されました。  
+> 今後の開発・更新はそちらのリポジトリで行われます。こちらのリポジトリはアーカイブ扱いとなります。
+
+---
+
+
 RViz / Gazebo 対応の ROS1 Noetic 開発環境です。  
 ソースコードはホストで管理し、**実行はすべて Docker コンテナ内**で行います。  
 ビルドには `catkin build`（catkin-tools）を使用し、rosbag の録画・再生にも対応しています。
